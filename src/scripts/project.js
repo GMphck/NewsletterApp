@@ -1,50 +1,17 @@
-// const form = document.querySelector(".form");
-
-// window.addEventListener("resize", function () {
-//   const image = document.querySelector(".img");
-
-//   if (window.innerWidth <= 625) {
-//     image.src = "/assets/images/illustration-sign-up-mobile.svg";
-//     console.log("done");
-//   } else {
-//     image.src = "/assets/images/illustration-sign-up-desktop.svg";
-//   }
-// });
-
-// document.body.onload = () => {
-//   const imoge = document.querySelector(".img");
-
-//   if (window.innerWidth <= 625) {
-//     imoge.src = "/assets/images/illustration-sign-up-mobile.svg";
-//   }
-// };
-
 // The size of the image and success message changes based on the size of the browser window
 const form = document.querySelector(".form");
 const image = document.querySelector(".img");
 
-// const linkElement = document.querySelector('link[id="activeCss"]');
-// console.log(linkElement);
-
-// const mobileStylesheet = "../styles/successMob.css";
-// const desktopStylesheet = "../styles/success.css";
 const mobileImage = "/assets/images/illustration-sign-up-mobile.svg";
 const desktopImage = "/assets/images/illustration-sign-up-desktop.svg";
 
 const changeLink = (widht) => {
-  console.log("resize");
   if (widht <= 625) {
     image.src = mobileImage;
-    // linkElement.href = mobileStylesheet;
-
-    console.log("size is mobile image");
   } else {
     image.src = desktopImage;
-    // linkElement.href = desktopStylesheet;
-    console.log("size is desktop image");
   }
 };
-
 changeLink(window.innerWidth);
 
 window.addEventListener("resize", () => {
@@ -54,8 +21,8 @@ window.addEventListener("resize", () => {
 document.body.onload = () => {
   changeLink(window.innerWidth);
 };
-//
 
+//
 if (form) {
   const emailInput = form.querySelector('input[name="email"]');
   const errorSpan = document.querySelector("span");
@@ -74,6 +41,7 @@ if (form) {
       event.preventDefault();
       console.log("Valid email, form submitted!");
       window.location.href = "../pages/active.html";
+      window.localStorage.setItem("email", emailInput.value);
     }
   });
 
@@ -91,8 +59,3 @@ if (form) {
   }
 }
 
-// const returnButton = document.getElementById("return");
-
-// returnButton.addEventListener("click", () => {
-//   console.log("done");
-// });

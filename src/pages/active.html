@@ -30,32 +30,15 @@
         </div>
       </div>
     </div>
-
     <script>
-      const element = document.getElementById("activeCss");
-      console.log(element);
-      const mobileStylesheet = "../styles/successMob.css";
-      const desktopStylesheet = "../styles/success.css";
-      const changeLink = (widht) => {
-        console.log("resize");
-        if (widht <= 625) {
-          element.href = mobileStylesheet;
-          console.log("size is mobile image");
-        } else {
-          element.href = desktopStylesheet;
-          console.log("size is desktop image");
-        }
-      };
+      const email = document.querySelector("span");
+      email.textContent = window.localStorage.email;
+      const returnButton = document.getElementById("return");
 
-      changeLink(window.innerWidth);
-
-      window.addEventListener("resize", () => {
-        changeLink(window.innerWidth);
+      returnButton.addEventListener("click", () => {
+        window.location.href = "../pages/main.html";
+        window.localStorage.clear();
       });
-
-      document.body.onload = () => {
-        changeLink(window.innerWidth);
-      };
     </script>
   </body>
 </html>
