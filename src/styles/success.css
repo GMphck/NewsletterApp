@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --tomato: hsl(4, 100%, 67%);
+  --darkSlateGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+h1,
+p,
+span {
+  color: var(--darkSlateGrey);
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--charcoalGrey);
+  height: 100vh;
+}
+
+.content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  background-color: var(--white);
+  border-radius: 25px;
+  padding: 40px;
+  gap: 25px;
+}
+
+img {
+  width: 45px;
+}
+
+h1 {
+  width: 100%;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+span {
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  background-color: var(--darkSlateGrey);
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 11px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(to right, rgb(255, 84, 120), var(--tomato));
+  box-shadow: 0 15px 20px rgba(255, 98, 87, 0.3);
+  transition: 0.3s ease-in-out;
+}
