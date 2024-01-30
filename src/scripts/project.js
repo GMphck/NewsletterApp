@@ -2,8 +2,8 @@
 const form = document.querySelector(".form");
 const image = document.querySelector(".img");
 
-const mobileImage = "/assets/images/illustration-sign-up-mobile.svg";
-const desktopImage = "/assets/images/illustration-sign-up-desktop.svg";
+const mobileImage = "./assets/images/illustration-sign-up-mobile.svg";
+const desktopImage = "./assets/images/illustration-sign-up-desktop.svg";
 
 const changeLink = (widht) => {
   if (widht <= 625) {
@@ -40,7 +40,7 @@ if (form) {
       // شيل الرسالة دي وحط بتاعة البريد الي حابب ترسلها
       event.preventDefault();
       console.log("Valid email, form submitted!");
-      window.location.href = "../pages/active.html";
+      window.location.href = "./src/pages/active.html";
       window.localStorage.setItem("email", emailInput.value);
     }
   });
